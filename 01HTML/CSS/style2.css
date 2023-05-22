@@ -2,7 +2,7 @@
     padding: 10px;
     margin: 10px;
     color: #780000;
-    text-align: center;
+    text-align: left;
     
 }
 
@@ -13,7 +13,7 @@ html, body {
 .main-container {
     border: 14px solid #003049;
     border-radius: 50px;
-    margin: 1rem;
+    margin: 2rem;
     background-color: #C1121F;
     
     
@@ -31,7 +31,7 @@ nav, section, footer, aside, article {
 article, aside {
     width: 35%;
     display: inline-block;
-    height: 350px;
+    height: 400px;
 }
 
 nav, footer, section {
