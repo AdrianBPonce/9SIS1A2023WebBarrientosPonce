@@ -5,7 +5,7 @@
 body{
     background-image: url(../images4/fondo.png);
     background-size: cover;
-    color: aqua;
+    color: hsl(187, 57%, 30%);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -16,7 +16,7 @@ body{
     background-color: aliceblue;
     width: 600px;
     height: 40px;
-    border-radius: 10px solid rgb(155, 244, 16);
+    border-radius: 10px solid rgb(244, 77, 16);
     margin-top: 10%;
     text-align: center;
 }
@@ -44,7 +44,7 @@ title{
 .userid input{
     height: 25px;
     width: 300px;
-    border: solid 2px #09c022;
+    border: solid 2px #c06e09;
     border-radius: 10px;
 }
 
@@ -62,9 +62,9 @@ title{
 .password input{
     height: 25px;
     width: 300px;
-    border: solid 2px #09c022;
-    border-radius: 10px;
-    margin-left: 20px;
+    border: solid 2px #c06509;
+    border-radius: 20px;
+    margin-left: 10px;
 
 }
 
