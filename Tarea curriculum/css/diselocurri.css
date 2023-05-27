@@ -1,0 +1,20 @@
+*{
+    padding: 10px;
+    margin: 10px;
+    color: #000000;
+    text-align: left;
+    
+}
+
+html, body {
+    background-color: #2b2c2d;
+}
+
+.main-container {
+    border: 14px solid #003049;
+    border-radius: 50px;
+    margin: 2rem;
+    background-color: #C1121F;
+    
+    
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Currículum</title>
+  <link rel="stylesheet" href="./css/diselocurri.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #535353;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    h1 {
+      margin: 0;
+      padding: 10px 0;
+      text-align: center;
+      background-color: #2c2a2a;
+      color: #ffffff;
+    }
+    
+    h2 {
+      margin-top: 20px;
+      color: #333333;
+    }
+    
+    .section {
+      margin-bottom: 20px;
+      animation: slideInLeft 1s ease-in-out;
+    }
+    
+    @keyframes slideInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .section h3 {
+      margin: 10px 0;
+      color: #333333;
+    }
+    
+    .section ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      margin-left: 20px;
+    }
+    
+    .contact-info {
+      margin-bottom: 20px;
+    }
+    
+    .contact-info ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    .skills ul {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    }
+    
+    .profile-image {
+      text-align: left;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    .profile-image img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    
+    .profile-name {
+      text-align: center;
+      animation: slideInUp 1s ease-in-out;
+    }
+    
+    @keyframes slideInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Currículum Vitae</h1>
+    
+    <div class="profile-image">
+      <img src="./imagencurri/Imagen de WhatsApp 2023-05-26 a las 23.10.00.jpg" alt="Foto de perfil">
+      <div class="profile-name">Adrian Antonio Barrientos Ponce</div> 
+    </div>
+
+    
+    <div class="section">
+      <h2>Objetivo</h2>
+      <p>Adquirir experiencia en el área de diseño e informática, enfocándome en el manejo y análisis de datos, para aplicar mis conocimientos adquiridos a lo largo de mi formación académica.</p>
+    </div>
+    
+    <div class="section">
+      <h2>Educación</h2>
+      <ul>
+        <li>- Ingeniería en Sistemas Computacionales (en curso) | Universidad Tres Culturas – 8° cuatrimestre.</li>
+        <li>- Técnico en informática | Colegio Mark Twain - 15 julio 2016 (Pasante).</li>
+        <li>- Diploma en Especialidad en Diseño Gráfico | Instituto de Diseño Gráfico Francisco Rodríguez – 15 de agosto 2019.</li>
+        <li>- Inglés Intermedio B2 (en curso) - Harmon Hall.</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>Proyectos</h2>
+      <ul>
+        <li>Elaboración de robot con inteligencia artificial. Encargado de coordinar y supervisar la elaboración del robot, además de apoyar en la elaboración del mismo.</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>Aptitudes y habilidades</h2>
+      <div class="skills">
+        <ul>
+          <li>Responsable.</li>
+          <li>Trabajo en equipo.</li>
+          <li>Creativo.</li>
+          <li>Rápido aprendizaje.</li>
+          <li>Buen manejo de computadora.</li>
+          <li>Manejo de paquetería office.</li>
+          <li>Capacidad de adaptación.</li>
+          <li>Facilidad de palabra.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Contacto</h2>
+      <div class="contact-info">
+        <ul>
+          <li>TELÉFONO: 55-73-43-51-58</li>
+        </ul>
+          <ul>
+          <li>CORREO ELECTRÓNICO: adrianbp2001@gmail.com</li>
+        </ul>
+    </div>
+    
+  </div>
+
+  <script>
+    // Agregar animación de fade-in al cargar la página
+    window.addEventListener('load', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+<div class="container">
+        <a href="../index.html">Regresar al inicio</a>
+    
+</body>
+</html>
