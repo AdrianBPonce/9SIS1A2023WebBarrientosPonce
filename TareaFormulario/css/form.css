@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #195d95;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  p {
+    margin-top: 10px;
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Problemas</title>
+  <link rel="stylesheet" href="./css/form.css">
+  <script src="./formu.js/fromulario.js" defer></script>
+</head>
+
+<body>
+  <h1>Formulario de Problemas</h1>
+
+  <form id="problem-form">
+    <h2>Problema 1</h2>
+    <label for="capital">Capital:</label>
+    <input type="number" id="capital" required>
+    <button type="button" onclick="calcularGanancia()">Calcular Ganancia</button>
+    <p id="ganancia"></p>
+
+    <h2>Problema 2</h2>
+    <label for="ventas">Total Ventas:</label>
+    <input type="number" id="ventas" required>
+    <label for="sueldo-base">Sueldo Base:</label>
+    <input type="number" id="sueldo-base" required>
+    <button type="button" onclick="calcularComisiones()">Calcular Comisiones</button>
+    <p id="comisiones"></p>
+    <p id="total"></p>
+
+    <h2>Problema 3</h2>
+    <label for="total-compra">Total Compra:</label>
+    <input type="number" id="total-compra" required>
+    <button type="button" onclick="calcularDescuento()">Calcular Descuento</button>
+    <p id="total-pagar"></p>
+
+    <h2>Problema 4</h2>
+    <label for="calif-parcial1">Calificación Parcial 1:</label>
+    <input type="number" id="calif-parcial1" required>
+    <label for="calif-parcial2">Calificación Parcial 2:</label>
+    <input type="number" id="calif-parcial2" required>
+    <label for="calif-parcial3">Calificación Parcial 3:</label>
+    <input type="number" id="calif-parcial3" required>
+    <label for="calif-examen">Calificación Examen Final:</label>
+    <input type="number" id="calif-examen" required>
+    <label for="calif-trabajo">Calificación Trabajo Final:</label>
+    <input type="number" id="calif-trabajo" required>
+    <button type="button" onclick="calcularCalificacionFinal()">Calcular Calificación Final</button>
+    <p id="calificacion-final"></p>
+
+    <h2>Problema 5</h2>
+    <label for="total-estudiantes">Total Estudiantes:</label>
+    <input type="number" id="total-estudiantes" required>
+    <label for="total-hombres">Total Hombres:</label>
+    <input type="number" id="total-hombres" required>
+    <button type="button" onclick="calcularPorcentaje()">Calcular Porcentaje</button>
+    <p id="porcentaje-hombres"></p>
+    <p id="porcentaje-mujeres"></p>
+
+    <h2>Problema 6</h2>
+    <label for="anio-nacimiento">Año de Nacimiento:</label>
+    <input type="number" id="anio-nacimiento" required>
+    <button type="button" onclick="calcularEdad()">Calcular Edad</button>
+    <p id="edad"></p>
+  </form>
+
+  <a href="../index.html">Regresar al Menu Principal</a>
+  
+</body>
+
+</html>
