@@ -1,106 +1,270 @@
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  animation: fadeIn 1s ease-in-out;
+  margin: 0px;
+  padding: 0;
 }
 
-@keyframes fadeIn {
+/* Estilos para el header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  
+}
+.container{
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos para el hero section */
+.hero {
+  background-image: url(hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #310f0f;
+  text-align: center;
+  padding: 150px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #f39c12;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e67e22;
+}
+
+/* Estilos para la sección de productos */
+.products {
+  background-color: #f2f2f2;
+  padding: 40px 0;
+}
+
+.product {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.product img {
+  width: 20%;
+  height: 20%;
+  margin-bottom: 20px;
+
+}
+
+.product h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la sección de alianzas */
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.partners li {
+  margin: 0 10px;
+}
+
+.partners img {
+  width: 150px;
+  height: auto;
+}
+
+/* Estilos para el formulario de contacto */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  background-color: #f39c12;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #e67e22;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer .container {
+  flex-basis: 20%;
+}
+
+.social-media {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media li {
+  margin: 0 10px;
+}
+
+.social-media a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.footer-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-container a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Animaciones */
+@keyframes slideIn {
   0% {
+    transform: translateX(-100%);
     opacity: 0;
   }
   100% {
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
-/* Estilos del encabezado */
-header {
-  background-color: #333;
-  padding: 20px;
-  animation: slideDown 1s ease-in-out;
-  text-align: center;
-}
-
-@keyframes slideDown {
+@keyframes fadeInDown {
   0% {
-    transform: translateY(-100%);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Estilos de la sección principal */
-.home {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  text-align: center;
-  animation: scaleIn 1s ease-in-out;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes scaleIn {
+@keyframes pulse {
   0% {
-    transform: scale(0);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
   }
 }
 
-/* Estilos de las consolas */
-.console {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  animation: slideUp 1s ease-in-out;
+/* Animaciones para elementos específicos */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
-@keyframes slideUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.animated.slideIn {
+  animation-name: slideIn;
 }
 
-.console-box {
-  border: 2px solid #333;
-  padding: 20px;
+.animated.fadeInDown {
+  animation-name: fadeInDown;
 }
 
-/* Estilos del pie de página */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  animation: slideUp 1s ease-in-out;
+.animated.fadeInUp {
+  animation-name: fadeInUp;
 }
 
-.footer-left ul {
-  list-style: none;
-  padding: 0;
+.animated.pulse {
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
 }
 
-.footer-left ul li {
-  margin-bottom: 10px;
-}
-
-.footer-left ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Estilos responsivos */
-@media (max-width: 600px) {
-  .console, .home {
-    padding: 10px;
-  }
-}
