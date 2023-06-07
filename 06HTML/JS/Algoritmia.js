@@ -60,20 +60,51 @@ document.querySelector('#p2-outout').textContent = 'Producto Escalar Minimo : ' 
 
 
 function contarCaracteresUnicos() {
-    var palabras = document.getElementById('p3-input').value;
-    var palabrasArray = palabras.split(',');
-  
-    var palabraMasLarga = '';
-    var maxCaracteresUnicos = 0;
-  
-    palabrasArray.forEach(function(palabra) {
-      var caracteresUnicos = new Set(palabra).size;
-      if (caracteresUnicos > maxCaracteresUnicos) {
-        maxCaracteresUnicos = caracteresUnicos;
-        palabraMasLarga = palabra;
+  var inputElement = document.getElementById("p3-input");
+  var outputElement = document.getElementById("p3-output");
+  var words = inputElement.value.split(",");
+
+  var maxUniqueChars = 0;
+  var wordWithMaxUniqueChars = "";
+
+  for (var i = 0; i < words.length; i++) {
+      var word = words[i].toUpperCase().trim();
+      var uniqueChars = getUniqueChars(word);
+      var numUniqueChars = uniqueChars.length;
+
+      if (numUniqueChars > maxUniqueChars) {
+          maxUniqueChars = numUniqueChars;
+          wordWithMaxUniqueChars = word;
       }
-    });
-  
-    document.getElementById('p3-output').textContent = palabraMasLarga;
   }
-  
+
+  outputElement.innerText = "La palabra con mayor número de caracteres únicos es: " + wordWithMaxUniqueChars;
+
+  mostrarPalabraCaracteresUnicos(words, wordWithMaxUniqueChars); // Llamada a la función mostrarPalabraCaracteresUnicos()
+}
+
+function getUniqueChars(word) {
+  var uniqueChars = [];
+
+  for (var i = 0; i < word.length; i++) {
+      var char = word[i];
+      if (uniqueChars.indexOf(char) === -1) {
+          uniqueChars.push(char);
+      }
+  }
+
+  return uniqueChars;
+}
+
+function mostrarPalabraCaracteresUnicos(words, wordWithMaxUniqueChars) {
+  var outputElement = document.getElementById("p3-output");
+  var wordsList = "Palabras ingresadas: " + words.join(", ") + "\n";
+
+  if (wordWithMaxUniqueChars !== "") {
+      var uniqueChars = getUniqueChars(wordWithMaxUniqueChars);
+      var wordUniqueChars = "Letras únicas de " + wordWithMaxUniqueChars + ": " + uniqueChars.join(", ");
+      outputElement.innerText = wordsList + wordUniqueChars;
+  } else {
+      outputElement.innerText = wordsList;
+  }
+}
