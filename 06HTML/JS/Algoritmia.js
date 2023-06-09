@@ -60,51 +60,35 @@ document.querySelector('#p2-outout').textContent = 'Producto Escalar Minimo : ' 
 
 
 function contarCaracteresUnicos() {
-  var inputElement = document.getElementById("p3-input");
-  var outputElement = document.getElementById("p3-output");
-  var words = inputElement.value.split(",");
-
-  var maxUniqueChars = 0;
-  var wordWithMaxUniqueChars = "";
-
-  for (var i = 0; i < words.length; i++) {
-      var word = words[i].toUpperCase().trim();
-      var uniqueChars = getUniqueChars(word);
-      var numUniqueChars = uniqueChars.length;
-
-      if (numUniqueChars > maxUniqueChars) {
-          maxUniqueChars = numUniqueChars;
-          wordWithMaxUniqueChars = word;
+    var inputPalabras = document.getElementById('p3-input').value;
+    var palabras = inputPalabras.split(',');
+  
+    // Verificar si hay palabras en minúscula o con espacios
+    var hayMinusculas = palabras.some(function(palabra) {
+      return /[a-z]/.test(palabra);
+    });
+  
+    if (hayMinusculas || inputPalabras !== inputPalabras.toUpperCase()) {
+      alert("Por favor, ingrese todas las palabras en mayúsculas y sin espacios.");
+      return;
+    }
+  
+    var resultado = 'Palabras ingresadas: ' + palabras.join(', ');
+  
+    var palabraMasLarga = '';
+    var longitudMaxima = 0;
+  
+    palabras.forEach(function(palabra) {
+      var longitud = palabra.length;
+      resultado += '\nLongitud de ' + palabra + ': ' + longitud;
+  
+      if (longitud > longitudMaxima) {
+        longitudMaxima = longitud;
+        palabraMasLarga = palabra;
       }
+    });
+  
+    resultado += '\nPalabra con mayor longitud: ' + palabraMasLarga + ' (' + longitudMaxima + ' caracteres)';
+  
+    document.getElementById('p3-output').textContent = resultado;
   }
-
-  outputElement.innerText = "La palabra con mayor número de caracteres únicos es: " + wordWithMaxUniqueChars;
-
-  mostrarPalabraCaracteresUnicos(words, wordWithMaxUniqueChars); // Llamada a la función mostrarPalabraCaracteresUnicos()
-}
-
-function getUniqueChars(word) {
-  var uniqueChars = [];
-
-  for (var i = 0; i < word.length; i++) {
-      var char = word[i];
-      if (uniqueChars.indexOf(char) === -1) {
-          uniqueChars.push(char);
-      }
-  }
-
-  return uniqueChars;
-}
-
-function mostrarPalabraCaracteresUnicos(words, wordWithMaxUniqueChars) {
-  var outputElement = document.getElementById("p3-output");
-  var wordsList = "Palabras ingresadas: " + words.join(", ") + "\n";
-
-  if (wordWithMaxUniqueChars !== "") {
-      var uniqueChars = getUniqueChars(wordWithMaxUniqueChars);
-      var wordUniqueChars = "Letras únicas de " + wordWithMaxUniqueChars + ": " + uniqueChars.join(", ");
-      outputElement.innerText = wordsList + wordUniqueChars;
-  } else {
-      outputElement.innerText = wordsList;
-  }
-}
